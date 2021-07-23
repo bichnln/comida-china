@@ -1,3 +1,8 @@
+* {
+    position: relative;
+    box-sizing: border-box;
+}
+
 body {
     scroll-behavior: smooth;
 }
@@ -11,8 +16,6 @@ section {
     width: 100%;
     padding: 20px 50px;
     color: #35384C;
-
-    
 }
 section h1 {
     text-align: center;
@@ -185,59 +188,40 @@ ul.leaders li .food-description .tag {
 }
 
 @media screen and (max-width: 768px) {
-
-    
     .top-nav__menu-icon {
         display: block;
     }
-    
 
     ul.top-nav__menu {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-        
         right: -100vw;
         top: 110px;
         z-index: 99;
         position: fixed;
-        
-        
         width: 100vw;
         height: 92vh;
         background-color: white;
         transition: all .5s ease-in-out;
         transform: translateX(0%);
-         
-        
     }
 
     ul.top-nav__menu--active {
         transform: translateX(-100%); 
-       
         z-index: 99
-        
     }
-
-    
-
-
 }
 
 a {
     text-decoration: none;
     color: rgb(29, 28, 28);
 }
+
 a:hover{
     color: initial;
 }
-
-* {
-   position: relative;
-   box-sizing: border-box;
-}
-
 
 .top-nav {
    height: 110px;
@@ -274,17 +258,12 @@ a:hover{
 .top-nav__menu li a:hover {
     color: #f39e28;
     font-weight: bold;
-    /* background-color: black; */
-
-    
 }
-
 
 .top-nav__menu-icon i {
     color: rgb(29, 28, 28);
     cursor: pointer;
 }
-
 
 .hero {
     position: relative;
@@ -308,7 +287,6 @@ a:hover{
 } 
 
 .hero::after { 
-    
     content: ""; 
     display: block;
     position: absolute; 
@@ -320,9 +298,7 @@ a:hover{
     opacity: .8;
     background-color: #0f0e0e; 
 }
-@media (min-width: 320px) { 
-    .hero::before { background-image: url("assets/header-comidachina-2_320.webp");} 
-}
+@media (min-width: 320px) { .hero::before { background-image: url("assets/header-comidachina-2_320.webp");} }
 @media (min-width: 460px) { .hero::before { background-image: url("assets/header-comidachina-2_480.webp"); } } 
 @media (min-width: 720px) { .hero::before { background-image: url("assets/header-comidachina-2_600.webp"); } } 
 @media (min-width: 980px) { .hero::before { background-image: url("assets/header-comidachina-2_1024.webp"); } } 
@@ -363,18 +339,15 @@ a:hover{
 
 
 .about p {
-   
     line-height: 1.3em;
-   margin: 10px 0;
-   font-size: 24px;
-   text-align: center;
-   color: #ac6e18;
-  background: -webkit-linear-gradient(#e99f38, #333);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    margin: 10px 0;
+    font-size: 24px;
+    text-align: center;
+    color: #ac6e18;
+    background: -webkit-linear-gradient(#e99f38, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
-
-
 
 .hero__title button {
     font-size: 16px;
@@ -400,15 +373,11 @@ p.about__p--black {
 
 .google-map #map {
     width: 100vw;
-    
     height: 400px;
     max-width: 80vw;
-    
 }
 
 @media screen and (max-width: 768px)  {
-    
-
     .hero__title h1 {
         
         line-height: 1em;
@@ -421,8 +390,6 @@ p.about__p--black {
 }
 
 @media screen and (max-width: 460px)  {
-    
-
     .hero__title h1 {
         
         line-height: 1em;
@@ -438,8 +405,6 @@ p.about__p--black {
         line-height: 1em;
     }
 }
-
-
 
 .footer {
     background-size: contain;
@@ -500,14 +465,6 @@ p.about__p--black {
 	animation-duration: 2s;
 }
 
-/* .fade-in {
-	opacity: 1;
-	animation-name: fadeInOpacity;
-	animation-iteration-count: 1;
-	animation-timing-function: ease-in;
-	animation-duration: 2s;
-} */
-
 @keyframes fadeInOpacity {
 	0% {
 		opacity: 0;
@@ -519,12 +476,14 @@ p.about__p--black {
 
 @keyframes zooInZoomOut {
     0% {
-transform: scale(1, 1);
-}
-50% {
-transform: scale(1.5, 1.5);
-}
-100% {
-transform: scale(1, 1);
-}
+        transform: scale(1, 1);
+    }
+
+    50% {
+        transform: scale(1.5, 1.5);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
 }
