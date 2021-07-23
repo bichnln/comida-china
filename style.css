@@ -11,6 +11,8 @@ section {
     width: 100%;
     padding: 20px 50px;
     color: #35384C;
+
+    
 }
 section h1 {
     text-align: center;
@@ -327,6 +329,7 @@ ul.leaders li .food-description .tag {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     height: 100%;
     color: white;
     
@@ -337,22 +340,37 @@ ul.leaders li .food-description .tag {
 .hero__title h1 {
    color: #fff;
    text-shadow: #343a40 2px 2px; 
-   text-align: left;
+   
    position: relative;
    line-height: 1.3em;
-   margin: 20px 0;
+   margin: 12px 0;
 
    
 }
 
+.hero__title h3 {
+    font-size: 22px;
+    margin: 12px 0;
+    text-align: center ;
+}
 
-.hero__title p {
+
+.about p {
    
     line-height: 1.3em;
    margin: 10px 0;
-   font-size: 18px;;
+   font-size: 24px;
+   text-align: center;
+   color: #ac6e18;
+  background: -webkit-linear-gradient(#e99f38, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
+
+.about {
+    
+}
 .hero__title button {
     font-size: 16px;
     font-family: 'Roboto';
@@ -360,25 +378,44 @@ ul.leaders li .food-description .tag {
 
 }
 
+.about .col {
+    border-top: 1.5px solid;
+    border-bottom: 1px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to left, transparent, transparent, #e99f38, #c27b18, #e99f38, transparent,transparent);
+}
+
 
 @media screen and (max-width: 768px)  {
-    .hero__title {
-    }
+    
 
     .hero__title h1 {
-        font-size: 18px;
+        
         line-height: 1em;
-         
+    }
+    
+    .about p, 
+    .hero__title button {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 460px)  {
+    
+
+    .hero__title h1 {
+        
+        line-height: 1em;
+        font-size: 25px;
     }
 
     .hero__title h3 {
-        
-        font-size: 15px;
+        font-size: 23px;
     }
     
-    .hero__title p, 
     .hero__title button {
-        font-size: 14px;
+        font-size: 16px;
+        line-height: 1em;
     }
 }
 .footer {
@@ -413,7 +450,12 @@ ul.leaders li .food-description .tag {
    
 }
 
-.footer__contact-list li a {
+.footer__contact-list a {
+    color:rgb(29, 28, 28);
+    text-decoration: none;
+}
+
+.footer__social-links a {
     color:rgb(29, 28, 28);
     text-decoration: none;
 }

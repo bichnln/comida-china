@@ -37,7 +37,7 @@
                             <li><a href="#ordernar">Ordernar</a></li>
                             <li><a href="#contacto">Contacto</a></li>
                         </ul>
-                        <div class="col-1 top-nav__menu-icon text-right" id="top-nav__menu-icon"onclick="menuExpand()">
+                        <div class="col-1 top-nav__menu-icon text-right" id="top-nav__menu-icon" onclick="menuExpand()">
                             <i class="fas fa-bars"></i>
                         </div>
                     </div>
@@ -48,38 +48,47 @@
     </header>
     <section class="hero">
         <div class="container hero__title">
-            <h1 class="">
-                Comida China de Calidad en Concepción
+            <h1 id="hero__title-heading">
+                Restaurant Feng
             </h1>
-            <h3>CASI 20 AÑOS DE TRAYECTORIA Y TRADICIÓN</h3>
-            <p>
-                Restaurant Feng ofrece un ambiente acogedor y platos de comida china preparados con los
-                ingredientes
-                más frescos de
-                Concepción.
-            </p>
-            <p>
-                Nos caracterizamos por preocuparnos de mantener la calidad de nuestros platos a través de
-                los
-                años,
-                que finalmente se
-                refleja en la riqueza de sabores en cada plato
-            </p>
-            
-            <button type="button" class="btn btn-outline-warning">Haz tu Pedido por Teléfono</button>
-            
-            
-            <p>
-                Horarios de atención
-            </p>
-            <p>
-                LUNES A DOMINGO: 12:00PM – 19:45PM
-            </p>
-            
+            <h3 id="hero__title-sub-heading">CASI 20 AÑOS DE TRAYECTORIA Y TRADICIÓN</h3>
+            <a href="tel:+56412520249">
+                <button type="button" class="btn btn-outline-warning">Haz tu Pedido por Teléfono</button>
+            </a>
         </div>
     </section>
 
-    
+    <section class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    
+                    <p>
+                        Restaurant Feng ofrece comida china de calidad en Concepción. Aquí encontrarás ambiente acogedor
+                        y platos de
+                        comida
+                        china preparados con los ingredientes más frescos de Concepción.
+                    </p>
+                    <p>
+                        Nos caracterizamos por preocuparnos de mantener la calidad de nuestros platos a través de los
+                        años, que
+                        finalmente se
+                        refleja en la riqueza de sabores en cada plato.
+                    </p>
+
+                    <p>
+                        Horarios de atención
+                    </p>
+                    <p>
+                        LUNES A DOMINGO: 12:00PM – 19:45PM
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
     <section class="entradas" id="entradas">
         <div class="menu">
             <h1>Entradas</h1>
@@ -772,10 +781,75 @@
             </ul>
         </div>
     </section>
+    <section class="ordernar" id="ordernar">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2>Delivery en Concepción</h2>
+
+                    <ul class="footer__order-list">
+                        <!-- <li>Delivery en Concepción</li> -->
+                        <li>
+                            <a href="https://www.pedidosya.cl/restaurantes/gran-concepcion/restaurant-feng-menu">
+                                <img src="assets/delivery-logo-2.svg" alt="deliver-logo">
+                            </a>
+
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-sm">
+                    <h2>Retiro en local</h2>
+                    <ul class="footer__order-list">
+                        <!-- <li>Retiro en local</li> -->
+                        <li>+56 41 2520249</li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="google-map">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2>Find us here</h2>
+                </div>
+            </div>
+        </div>
+
+    </section>
 
     <section class="footer">
         <div class="container">
-            <div class="row justify-content-evenly" id="ordernar">
+            <div class="row">
+                <div class="col" id="contacto">
+                    <h2>Contacto</h2>
+                    <div class="row">
+                        <div class="col">
+                            <ul class="footer__contact-list">
+                                <li>
+                                    Telefono: +56 41 2520249
+                                </li>
+                                <li>
+                                    Direccion: Dr. Wilhelm 37, Concepción, Chile
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col footer__social-links">
+
+                            <i class="fab fa-instagram"></i>
+                            <a href="https://www.instagram.com/restaurant_feng/">
+                                Instagram
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="row justify-content-evenly" id="ordernar">
                 <div class="col-xs-12 col-sm-5">
                     <h2>Ordernar</h2>
                     <div class="row">
@@ -825,7 +899,7 @@
                         <img src="assets/googlemap.png" alt="google-map">
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
 
@@ -837,7 +911,9 @@
         const menuExpand = () => {
             navMenu.classList.toggle("top-nav__menu--active");
         }
-        
+
+
+
         document.addEventListener("scroll", () => {
             if (navMenu.classList.contains("top-nav__menu--active")) {
                 navMenu.classList.toggle("top-nav__menu--active");
@@ -847,28 +923,30 @@
 
             let minWidth = 100;
             let maxWidth = 200;
-             let width = percentScrolled * (maxWidth - minWidth) + minWidth;
+            let width = percentScrolled * (maxWidth - minWidth) + minWidth;
 
             let minHeight = 100;
             let maxHeight = 200;
             let height = percentScrolled * (maxHeight - minHeight) + minHeight;
 
-             // The starting position
+            // The starting position
             let originalPosition = [100, 100];
 
             // Update width and height
             // $(".fake-image").css("width", width + "px");
             // $(".fake-image").css("height", height + "px");
 
-            let heroTitle = document.getElementsByClassName("hero__title")[0];
+            let heroTitleH1 = document.getElementById("hero__title-heading");
+            let heroTitleH3 = document.getElementById("hero__title-sub-heading");
 
-            heroTitle.style.transform = `scaleX( ${1 + percentScrolled})  scaleY(${1 + percentScrolled - 0.05})`;
-      
+            heroTitleH1.style.transform = `scaleX( ${1.1 + percentScrolled})  scaleY(${1.1 + percentScrolled - 0.05})`;
+            heroTitleH3.style.transform = `scaleX( ${1.1 + percentScrolled})  scaleY(${1.1 + percentScrolled - 0.05})`;
+
             // let heroTitleChildren = heroTitle.childNodes;
             // console.log(heroTitleChildren);
 
             // for (var i = 0; i < heroTitleChildren.length; i++) {
-                
+
             //     heroTitleChildren[i].style.width = width + "px";
             //     heroTitleChildren[i].style.height = height + "px";
 
@@ -877,7 +955,7 @@
             // Move the image so the center stays the same
             // $(".fake-image").css("left", originalPosition[0] - (width - minWidth) / 2 + "px");
             // $(".fake-image").css("top", originalPosition[1] - (height - minHeight) / 2 + "px");
-            
+
         })
 
         document.addEventListener("DOMContentLoaded", () => {
@@ -894,7 +972,7 @@
                 }
             }
         })
-        
+
     </script>
 
 </body>
