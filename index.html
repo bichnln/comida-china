@@ -842,6 +842,41 @@
             if (navMenu.classList.contains("top-nav__menu--active")) {
                 navMenu.classList.toggle("top-nav__menu--active");
             }
+
+            let percentScrolled = window.scrollY / window.innerHeight;
+
+            let minWidth = 100;
+            let maxWidth = 200;
+             let width = percentScrolled * (maxWidth - minWidth) + minWidth;
+
+            let minHeight = 100;
+            let maxHeight = 200;
+            let height = percentScrolled * (maxHeight - minHeight) + minHeight;
+
+             // The starting position
+            let originalPosition = [100, 100];
+
+            // Update width and height
+            // $(".fake-image").css("width", width + "px");
+            // $(".fake-image").css("height", height + "px");
+
+            let heroTitle = document.getElementsByClassName("hero__title")[0];
+
+            heroTitle.style.transform = `scaleX( ${1 + percentScrolled})  scaleY(${1 + percentScrolled - 0.05})`;
+      
+            // let heroTitleChildren = heroTitle.childNodes;
+            // console.log(heroTitleChildren);
+
+            // for (var i = 0; i < heroTitleChildren.length; i++) {
+                
+            //     heroTitleChildren[i].style.width = width + "px";
+            //     heroTitleChildren[i].style.height = height + "px";
+
+            // }
+
+            // Move the image so the center stays the same
+            // $(".fake-image").css("left", originalPosition[0] - (width - minWidth) / 2 + "px");
+            // $(".fake-image").css("top", originalPosition[1] - (height - minHeight) / 2 + "px");
             
         })
 

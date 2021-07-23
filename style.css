@@ -451,3 +451,15 @@ ul.leaders li .food-description .tag {
 		opacity: 1;
 	}
 }
+
+@keyframes zooInZoomOut {
+    0% {
+transform: scale(1, 1);
+}
+50% {
+transform: scale(1.5, 1.5);
+}
+100% {
+transform: scale(1, 1);
+}
+}
