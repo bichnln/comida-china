@@ -195,24 +195,26 @@ ul.leaders li .food-description .tag {
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
+        
+        right: -100vw;
+        top: 110px;
+        z-index: 99;
         position: fixed;
         
-        top: 110px;
-        right: 0;
+        
         width: 100vw;
         height: 92vh;
         background-color: white;
         transition: all .5s ease-in-out;
-        transform: translateX(100%);
-        
-       z-index: 99;
+        transform: translateX(0%);
+         
         
     }
 
     ul.top-nav__menu--active {
-        transform: translateX(0%);
-        
-        z-index: 99;
+        transform: translateX(-100%); 
+       
+        z-index: 99
         
     }
 
@@ -422,13 +424,24 @@ ul.leaders li .food-description .tag {
    max-width: 80%;
 }
 
-.fade-in {
-	opacity: 1;
+.hero__title h1, 
+.hero__title h3, 
+.hero__title p, 
+.hero__title button {
+    opacity: 1;
 	animation-name: fadeInOpacity;
 	animation-iteration-count: 1;
 	animation-timing-function: ease-in;
 	animation-duration: 2s;
 }
+
+/* .fade-in {
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 2s;
+} */
 
 @keyframes fadeInOpacity {
 	0% {
