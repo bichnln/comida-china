@@ -1,0 +1,266 @@
+body {
+    scroll-behavior: smooth;
+}
+
+ul {
+    margin: 0;
+}
+
+section {
+    font-family: 'Bellefair', serif;
+    width: 100%;
+    padding: 20px 50px;
+    color: #35384C;
+}
+section h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #35384C;
+}
+section .menu {
+    max-width: 1200px;
+    margin: auto;
+}
+section .price {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 1000;
+}
+section.entradas,
+section.entradas .name,
+section.entradas .price {
+    background: #FAF1E6;
+}
+section.arroz,
+section.arroz .name,
+section.arroz .price {
+    background: #FDFAF6;
+}
+section.sopas,
+section.sopas .name,
+section.sopas .price,
+section.sopas h1 {
+    background: #E4EFE7;
+}
+section.menu-tradicional,
+section.menu-tradicional .name,
+section.menu-tradicional .price {
+    background: #FAF1E6;
+}
+section.carnes-de-vacuno,
+section.carnes-de-vacuno .name,
+section.carnes-de-vacuno .price {
+    background: #FDFAF6;
+}
+section.pollo,
+section.pollo .name,
+section.pollo .price {
+    background: #E4EFE7;
+}
+section.cerdo,
+section.cerdo .name,
+section.cerdo .price,
+section.cerdo h1 {
+    background: #FAF1E6;
+}
+section.diente-de-dragon,
+section.diente-de-dragon .name,
+section.diente-de-dragon .price {
+    background: #FDFAF6;
+}
+section.pescados-y-mariscos,
+section.pescados-y-mariscos .name,
+section.pescados-y-mariscos .price {
+    background: #E4EFE7;
+}
+section.verduras-de-temporada,
+section.verduras-de-temporada .name,
+section.verduras-de-temporada .price {
+    background: #FAF1E6;
+}
+section.fideos-salteados,
+section.fideos-salteados .name,
+section.fideos-salteados .price {
+    background: #FDFAF6;
+}
+
+ul.leaders {
+    max-width: 100%;
+    padding: 0;
+    overflow-x: hidden;
+    list-style: none
+}
+ul.leaders .name:before {
+    float: left;
+    width: 0;
+    white-space: nowrap;
+    color: black;
+    content:
+ "..................."
+ "..................."
+ "..................."
+ "..................."
+ "..................."
+ "..................."
+ "..................."
+ "..................."
+ "..................."
+ "..................."
+ "..................."
+ "..................."
+ "..................."
+ "..................."
+ "..................."
+ "..................."
+}
+ul.leaders .name:first-child {
+    padding-right: 0.33em;
+}
+ul.leaders .name + .price {
+    float: right;
+    padding-left: 0.33em;
+}
+ul.leaders li {
+    margin-bottom: 20px;
+}
+ul.leaders li .food-info span {
+    font-size: 24px;
+    font-weight: 500;
+}
+ul.leaders li .food-description {
+    font-family: Tahoma, Helvetica, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+ul.leaders li .food-description span {
+    display: block;
+    font-size: 16px;
+    color: #707070;
+}
+ul.leaders li .food-description .description {
+    flex-basis: 70%;
+}
+ul.leaders li .food-description .tag {
+    background: #F32643;
+    color: white;
+    text-transform: uppercase;
+    padding: 2px 10px;
+    height: 28px;
+    font-weight: bold;
+}
+.menu-tradicional .food-description {
+    max-width: 90%;
+}
+
+@media only screen and (max-width: 768px) {
+    ul.leaders li .food-info span {
+        font-size: 16px;
+        font-weight: 500;
+    }
+    ul.leaders li .food-description span {
+        display: block;
+        font-size: 10px;
+        color: #707070;
+        font-weight: 500;
+    }
+    ul.leaders li .food-description .description {
+        flex-basis: 100%;
+    }
+    ul.leaders li .food-description .tag {
+        background: #F32643;
+        color: white;
+        text-transform: uppercase;
+        padding: 2px 10px;
+        height: 19px;
+    }
+}
+
+* {
+   position: relative;
+   box-sizing: border-box;
+}
+
+.top-nav {
+   height: 110px;
+   padding: 30px 50px;
+}
+
+.top-nav__logo img{
+   min-width: 150px;
+   max-width: 200px;
+   width: 15vw; 
+   height: auto;
+}
+
+.top-nav__menu {
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   flex-wrap: nowrap;
+   
+}
+
+.top-nav__menu li {
+   list-style-type: none;
+   padding: 0 10px;
+}
+
+.top-nav__menu li a {
+    text-decoration: none;
+}
+
+.hero {
+   background-image: url("header-comidachina-2 (1).webp");
+
+   background-size: cover;
+   width: 100%;
+   height: 600px;
+   background-repeat: no-repeat;
+   
+   padding: 200px;
+   text-align: center;
+
+}
+
+.hero__title {
+   color: white;
+
+}
+
+
+.about {
+   margin: 30px 0;
+}
+
+.about p {
+   line-height: 1.2em;
+}
+.footer__order-list {
+   padding: 0;
+}
+
+.footer__order-list li {
+   list-style-type: none;
+   padding: 0;
+   margin: 0;
+}
+
+.footer__order-list li img {
+   margin: 5px 0;
+   width: 150px;
+   height: auto;
+}
+
+.footer__contact-list {
+    padding: 0;
+}
+
+.footer__contact-list li {
+   list-style-type: none;
+   
+}
+
+.footer__googlemap img {
+   width: 200px;
+   height: 200px;
+}
