@@ -385,6 +385,21 @@ ul.leaders li .food-description .tag {
     border-image-source: linear-gradient(to left, transparent, transparent, #e99f38, #c27b18, #e99f38, transparent,transparent);
 }
 
+p.about__p--black {
+    color: black;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background: white;
+    -webkit-text-fill-color: black;
+}
+
+.google-map #map {
+    width: 100vw;
+    
+    height: 400px;
+    max-width: 80vw;
+    
+}
 
 @media screen and (max-width: 768px)  {
     
