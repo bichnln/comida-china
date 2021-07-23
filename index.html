@@ -2,129 +2,866 @@
 <html lang="en">
 
 <head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Document</title>
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-   <link href="styles.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Restaurant Feng</title>
 </head>
 
 <body>
-   <header>
-      <nav class="top-nav">
-         <div class="container">
+
+    <header>
+        <nav class="top-nav">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-sm">
+                        <div class="top-nav__logo">
+                            <img src="assets/restaurant-logo.png" alt="brand">
+                        </div>
+                    </div>
+                    <div class="col-1 col-sm my-auto top-nav__menu-wrapper">
+                        <ul class="top-nav__menu" id="top-nav__menu">
+                            <li><a href="#about">Inicio</a></li>
+                            <li><a href="#entradas">Menu</a></li>
+                            <li><a href="#ordernar">Ordernar</a></li>
+                            <li><a href="#contacto">Contacto</a></li>
+                        </ul>
+                        <div class="col-1 top-nav__menu-icon text-right" id="top-nav__menu-icon"onclick="menuExpand()">
+                            <i class="fas fa-bars"></i>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="hero">
+        <div class="container hero__title">
+            <h1 class="fade-in">
+                Comida China de Calidad en Concepción
+            </h1>
+            <h3>CASI 20 AÑOS DE TRAYECTORIA Y TRADICIÓN</h3>
+            <p>
+                Restaurant Feng ofrece un ambiente acogedor y platos de comida china preparados con los
+                ingredientes
+                más frescos de
+                Concepción.
+            </p>
+            <p>
+                Nos caracterizamos por preocuparnos de mantener la calidad de nuestros platos a través de
+                los
+                años,
+                que finalmente se
+                refleja en la riqueza de sabores en cada plato
+            </p>
+            
+            <button type="button" class="btn btn-outline-warning">Haz tu Pedido por Teléfono</button>
+            
+            
+            <p>
+                Horarios de atención
+            </p>
+            <p>
+                LUNES A DOMINGO: 12:00PM – 19:45PM
+            </p>
+            
+        </div>
+    </section>
+
+    
+    <section class="entradas" id="entradas">
+        <div class="menu">
+            <h1>Entradas</h1>
+            <ul class="list-item leaders">
+                <li>
+                    <div class="food-info">
+                        <span class="name">
+                            Wantan Frito
+                        </span>
+                        <span class="price">
+                            $1.600
+                        </span>
+                    </div>
+                    <div class="food-description">
+                        <span class="description">
+                            Masa fina con relleno de carne de cerdo
+                        </span>
+                        <span class="tag">
+                            Clasico
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <div class="food-info">
+                        <span class="name">
+                            Arrollado Primavera
+                        </span>
+                        <span class="price">
+                            $2.500
+                        </span>
+                    </div>
+                    <div class="food-description">
+                        <span class="description">
+                            Carne de vacuno, repollo
+                        </span>
+                        <span class="tag">
+                            Clasico
+                        </span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="arroz">
+        <div class="menu">
+            <h1>Arroz</h1>
+            <ul class="list-item leaders">
+                <li>
+                    <div class="food-info">
+                        <span class="name">
+                            Arroz Chaufan Especial
+                        </span>
+                        <span class="price">
+                            $2.200
+                        </span>
+                    </div>
+                    <div class="food-description">
+                        <span class="description">
+                            Arroz, verduras de temporada, carne de cerdo, huevo, camarones
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <div class="food-info">
+                        <span class="name">
+                            Arroz Chaufan
+                        </span>
+                        <span class="price">
+                            $1.500
+                        </span>
+                    </div>
+                    <div class="food-description">
+                        <span class="description">
+                            Arroz, verduras de temporada, carne de cerdo, huevo
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <div class="food-info">
+                        <span class="name">
+                            Arroz Blanco
+                        </span>
+                        <span class="price">
+                            $1.400
+                        </span>
+                    </div>
+                    <div class="food-description">
+                        <span class="description"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="sopas">
+        <div class="menu">
+            <h1>Sopas</h1>
+            <ul class="list-item leaders">
+                <li>
+                    <div class="food-info">
+                        <span class="name">
+                            Sopa Especial
+                        </span>
+                        <span class="price">
+                            $3.300
+                        </span>
+                    </div>
+                    <div class="food-description">
+                        <span class="description">
+                            Verduras de temporada, camarones, pollo
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <div class="food-info">
+                        <span class="name">
+                            Sopa Ifu Min
+                        </span>
+                        <span class="price">
+                            $3.300
+                        </span>
+                    </div>
+                    <div class="food-description">
+                        <span class="description">
+                            Fideos de arroz, verduras de temporada
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <div class="food-info">
+                        <span class="name">
+                            Sopa Wantan
+                        </span>
+                        <span class="price">
+                            $3.300
+                        </span>
+                    </div>
+                    <div class="food-description">
+                        <span class="description">Wantan</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="menu-tradicional">
+        <div class="menu">
+            <h1>Menus Tradicionales</h1>
+            <ul class="list-item leaders">
+                <li>
+                    <div class="food-info">
+                        <span class="name">
+                            Menu 2 Personas
+                        </span>
+                        <span class="price">
+                            $17.900
+                        </span>
+                    </div>
+                    <div class="food-description">
+                        <span class="description">
+                            1 Wantan Frito (8 Unid.) • 1 Carne Mongoliana • 1 Chapsui de Pollo • 2 Arroz Chaufan
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <div class="food-info">
+                        <span class="name">
+                            Menu 3 Personas
+                        </span>
+                        <span class="price">
+                            $27.500
+                        </span>
+                    </div>
+                    <div class="food-description">
+                        <span class="description">
+                            1 Wantan Frito (8 Unid.) • 1 Arrollado Primavera (4 Unid.) • 1 Carne Mongoliana • 1 Chapsui
+                            de Pollo • 1 Chapsui de Carne • 3 Arroz Chaufan
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <div class="food-info">
+                        <span class="name">
+                            Menu 4 Personas
+                        </span>
+                        <span class="price">
+                            $36.200
+                        </span>
+                    </div>
+                    <div class="food-description">
+                        <span class="description">
+                            1 Wantan Frito (8 Unid.) • 1 Arrollado Primavera (4 Unid.) • 1 Carne Mongoliana • 1 Chapsui
+                            de Pollo • 1 Chapsui de Carne • 1 Pollo Chiten • 4 Arroz Chaufan
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <div class="food-info">
+                        <span class="name">
+                            Menu 5 Personas
+                        </span>
+                        <span class="price">
+                            $46.500
+                        </span>
+                    </div>
+                    <div class="food-description">
+                        <span class="description">
+                            2 Wantan Frito (16 Unid.) • 1 Arrollado Primavera (5 Unid.) • 1 Carne Mongoliana • 1 Pollo
+                            Mongoliano • 1 Chapsui de Pollo • 1 Chapsui de Carne • 1 Pollo Chiten • 5 Arroz Chaufan
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <div class="food-info">
+                        <span class="name">
+                            Menu 6 Personas
+                        </span>
+                        <span class="price">
+                            $54.000
+                        </span>
+                    </div>
+                    <div class="food-description">
+                        <span class="description">
+                            2 Wantan Frito (16 Unid.) • 1 Arrollado Primavera (65 Unid.) • 1 Carne Mongoliana • 1
+                            Costillar Cantones • 2 Chapsui de Pollo • 1 Chapsui de Carne • 1 Pollo Chiten • 6 Arroz
+                            Chaufan
+                        </span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="carnes-de-vacuno">
+        <div class="menu">
+            <h1>Carnes de Vacuno</h1>
             <div class="row">
-               <div class="col">
-                  <div class="top-nav__logo">
-                     <img src="restaurant-logo.png" alt="brand">
-                  </div>
-               </div>
-               <div class="col  my-auto">
-                  <ul class="top-nav__menu">
-                     <li><a href="#about">Inicio</a></li>
-                     <li><a href="#menu">Menu</a></li>
-                     <li><a href="#ordernar">Ordernar</a></li>
-                     <li><a href="#contacto">Contacto</a></li>
-                  </ul>
-               </div>
-            </div>
-         </div>
-      </nav>
-   </header>
-   <section class="hero">
-      <div class="container-fluid">
-         <h1 class="hero__title">
-            Comida China de Calidad en Concepción
-         </h1>
-      </div>
-   </section>
-
-   <section class="about">
-      <div class="container">
-         <div class="row">
-            <div class="col">
-               <article>
-                  <h3>CASI 20 AÑOS DE TRAYECTORIA Y TRADICIÓN</h3>
-                  <p>
-                     Restaurant Feng ofrece un ambiente acogedor y platos de comida china preparados con los
-                     ingredientes
-                     más frescos de
-                     Concepción.
-                  </p>
-                  <p>
-                     Nos caracterizamos por preocuparnos de mantener la calidad de nuestros platos a través de los años,
-                     que finalmente se
-                     refleja en la riqueza de sabores en cada plato
-                  </p>
-
-                  <button type="button" class="btn btn-dark">Haz tu Pedido por Teléfono</button>
-
-                  <p>
-                     Horarios de atención
-
-                     LUNES A DOMINGO: 12:00PM – 19:45PM
-                  </p>
-               </article>
-            </div>
-         </div>
-      </div>
-   </section>
-
-   <section class="menu">
-
-   </section>
-
-   <section class="footer">
-      <div class="container">
-         <div class="row" id="ordernar">
-            <div class="col">
-               <h2>Ordernar</h2>
-               <div class="row">
-                  <div class="col">
-                     <ul class="footer__order-list">
-                        <li>Delivery en Concepción</li>
+                <div class="col-12 col-md-6">
+                    <ul class="list-item leaders">
                         <li>
-                           <a href="https://www.pedidosya.cl/restaurantes/gran-concepcion/restaurant-feng-menu">
-                              <img src="delivery-logo-2.svg" alt="deliver-logo">
-                           </a>
-                           
+                            <div class="food-info">
+                                <span class="name">
+                                    Filete Mongoliano
+                                </span>
+                                <span class="price">
+                                    $10.700
+                                </span>
+                            </div>
+                            <div class="food-description">
+                                <span class="description">
+                                    Filete de vacuno, cebollin
+                                </span>
+                                <span class="tag">Recommendado</span>
+                            </div>
                         </li>
-                     </ul>
-                  </div>
-                  <div class="col">
-                     <ul class="footer__order-list">
-                        <li>Retiro en local</li>
-                        <li>+56 41 2520249</li>
-                     </ul>
-                  </div>
-               </div>
+                        <li>
+                            <div class="food-info">
+                                <span class="name">
+                                    Carne Mongoliana
+                                </span>
+                                <span class="price">
+                                    $7.400
+                                </span>
+                            </div>
+                            <div class="food-description">
+                                <span class="description">
+                                    Carne de vacuno, cebollin
+                                </span>
+                                <span class="tag">Popular</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="food-info">
+                                <span class="name">
+                                    Carne con Champiñiones
+                                </span>
+                                <span class="price">
+                                    $8.800
+                                </span>
+                            </div>
+                            <div class="food-description">
+                                <span class="description">
+                                    Carne de vacuno, cebollin, champiñiones
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6">
+                    <ul class="list-item leaders">
+                        <li>
+                            <div class="food-info">
+                                <span class="name">
+                                    Carne con Curry
+                                </span>
+                                <span class="price">
+                                    $7.400
+                                </span>
+                            </div>
+                            <div class="food-description">
+                                <span class="description">
+                                    Carne de vacuno, cebollin, curry
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="food-info">
+                                <span class="name">
+                                    Carne con Algas
+                                </span>
+                                <span class="price">
+                                    $8.800
+                                </span>
+                            </div>
+                            <div class="food-description">
+                                <span class="description">
+                                    Carne de vacuno, cebollin, algas chinas
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="food-info">
+                                <span class="name">
+                                    Carne con Bambu
+                                </span>
+                                <span class="price">
+                                    $8.800
+                                </span>
+                            </div>
+                            <div class="food-description">
+                                <span class="description">
+                                    Carne de vacuno, cebollin, bambu
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
-         </div>
-
-         <div class="row" id="contacto">
-            <div class="col">
-
-               <h2>Contacto</h2>
-               <ul class="footer__contact-list">
-                  <li>Telefono: +56 41 2520249</li>
-                  <li>Direccion: Dr. Wilhelm 37, Concepción, Chile</li>
-                  <li><a href="https://www.instagram.com/restaurant_feng/">Instagram</a></li>
-               </ul>
+        </div>
+    </section>
+    <section class="pollo">
+        <div class="menu">
+            <h1>Carne de Pollo</h1>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <ul class="list-item leaders">
+                        <li>
+                            <div class="food-info">
+                                <span class="name">
+                                    Pollo Chiten
+                                </span>
+                                <span class="price">
+                                    $7.500
+                                </span>
+                            </div>
+                            <div class="food-description">
+                                <span class="description">
+                                    Pollo, verduras de temporada, almendras
+                                </span>
+                                <span class="tag">Popular</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="food-info">
+                                <span class="name">
+                                    Pollo Mongoliano
+                                </span>
+                                <span class="price">
+                                    $6.800
+                                </span>
+                            </div>
+                            <div class="food-description">
+                                <span class="description">
+                                    Pollo, cebollin
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="food-info">
+                                <span class="name">
+                                    Pollo Tausi
+                                </span>
+                                <span class="price">
+                                    $6.800
+                                </span>
+                            </div>
+                            <div class="food-description">
+                                <span class="description">
+                                    Pollo, cebollin, porotos negros fermentados
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6">
+                    <ul class="list-item leaders">
+                        <li>
+                            <div class="food-info">
+                                <span class="name">
+                                    Pollo con Champiñiones
+                                </span>
+                                <span class="price">
+                                    $8.100
+                                </span>
+                            </div>
+                            <div class="food-description">
+                                <span class="description">
+                                    Pollo, cebollin, champiñiones
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="food-info">
+                                <span class="name">
+                                    Pollo con Piña
+                                </span>
+                                <span class="price">
+                                    $6.800
+                                </span>
+                            </div>
+                            <div class="food-description">
+                                <span class="description">
+                                    Pollo, piña, salsa tamarindo
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
-         </div>
-
-         <div class="row">
-            <div class="col">
-               <div class="footer__googlemap">
-                  <img src="googlemap.png" alt="google-map">
-               </div>
+        </div>
+    </section>
+    <section class="cerdo">
+        <div class="menu">
+            <h1>Carne de Cerdo</h1>
+            <ul class="list-item leaders">
+                <li>
+                    <div class="food-info">
+                        <span class="name">
+                            Costillar Cantones
+                        </span>
+                        <span class="price">
+                            $7.500
+                        </span>
+                    </div>
+                    <div class="food-description">
+                        <span class="description">
+                            Carne arrebozado, piña, salsa tamarindo
+                        </span>
+                        <span class="tag">Popular</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="diente-de-dragon">
+        <div class="menu">
+            <h1>Diente de Dragon (Brotes de Porotos)</h1>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <ul class="list-item leaders">
+                        <li>
+                            <div class="food-info">
+                                <span class="name">
+                                    Diente de Dragon con Pollo
+                                </span>
+                                <span class="price">
+                                    $6.100
+                                </span>
+                            </div>
+                            <div class="food-description">
+                                <span class="description">
+                                    Diente de dragon, pollo, cebollin
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="food-info">
+                                <span class="name">
+                                    Diente de Dragon con Carne
+                                </span>
+                                <span class="price">
+                                    $6.100
+                                </span>
+                            </div>
+                            <div class="food-description">
+                                <span class="description">
+                                    Diente de dragon, carne de vacuno, cebollin
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6">
+                    <ul class="list-item leaders">
+                        <li>
+                            <div class="food-info">
+                                <span class="name">
+                                    Diente de Dragon con Camaron
+                                </span>
+                                <span class="price">
+                                    $7.000
+                                </span>
+                            </div>
+                            <div class="food-description">
+                                <span class="description">
+                                    Diente de dragon, camarones, cebollin
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
-         </div>
-      </div>
+        </div>
+    </section>
+    <section class="pescados-y-mariscos">
+        <div class="menu">
+            <h1>Pescados & Mariscos</h1>
+            <ul class="list-item leaders">
+                <li>
+                    <div class="food-info">
+                        <span class="name">
+                            Camarones Ecuatorianos Salteados
+                        </span>
+                        <span class="price">
+                            $9.900
+                        </span>
+                    </div>
+                    <div class="food-description">
+                        <span class="description">
+                            Camarones ecuatorianos, cebollin
+                        </span>
+                        <span class="tag">Recommendado</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="food-info">
+                        <span class="name">
+                            Camarones Tausi
+                        </span>
+                        <span class="price">
+                            $9.900
+                        </span>
+                    </div>
+                    <div class="food-description">
+                        <span class="description">
+                            Camarones salteados con porotos negros fermentados
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <div class="food-info">
+                        <span class="name">
+                            Camarones Fuyon
+                        </span>
+                        <span class="price">
+                            $9.900
+                        </span>
+                    </div>
+                    <div class="food-description">
+                        <span class="description">
+                            Omelette de camarones
+                        </span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="verduras-de-temporada">
+        <div class="menu">
+            <h1>Verduras de Temporada</h1>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <ul class="list-item leaders">
+                        <li>
+                            <div class="food-info">
+                                <span class="name">
+                                    Chapsui Especial
+                                </span>
+                                <span class="price">
+                                    $8.200
+                                </span>
+                            </div>
+                            <div class="food-description">
+                                <span class="description">
+                                    Surtido de verduras, pollo, carne de vacuno, camarones, almendras
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="food-info">
+                                <span class="name">
+                                    Chapsui de Carne
+                                </span>
+                                <span class="price">
+                                    $6.100
+                                </span>
+                            </div>
+                            <div class="food-description">
+                                <span class="description">
+                                    Surtido de verduras, carne de vacuno
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="food-info">
+                                <span class="name">
+                                    Chapsui de Pollo
+                                </span>
+                                <span class="price">
+                                    $6.100
+                                </span>
+                            </div>
+                            <div class="food-description">
+                                <span class="description">
+                                    Surtido de verduras, pollo
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6">
+                    <ul class="list-item leaders">
+                        <li>
+                            <div class="food-info">
+                                <span class="name">
+                                    Chapsui de Camarones
+                                </span>
+                                <span class="price">
+                                    $7.000
+                                </span>
+                            </div>
+                            <div class="food-description">
+                                <span class="description">
+                                    Surtido de verduras, camarones
+                                </span>
+                                <span class="tag">Recommendado</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="food-info">
+                                <span class="name">
+                                    Chapsui Solo
+                                </span>
+                                <span class="price">
+                                    $4.500
+                                </span>
+                            </div>
+                            <div class="food-description">
+                                <span class="description">
+                                    Surtido de verduras
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="fideos-salteados">
+        <div class="menu">
+            <h1>Fideos Salteados</h1>
+            <ul class="list-item leaders">
+                <li>
+                    <div class="food-info">
+                        <span class="name">
+                            Chaumin con Pollo
+                        </span>
+                        <span class="price">
+                            $6.500
+                        </span>
+                    </div>
+                    <div class="food-description">
+                        <span class="description">
+                            Fideos de trigo, pollo, diente de dragon, cebollin
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <div class="food-info">
+                        <span class="name">
+                            Chaumin con Camaron
+                        </span>
+                        <span class="price">
+                            $7.000
+                        </span>
+                    </div>
+                    <div class="food-description">
+                        <span class="description">
+                            Fideos de trigo, camarones, cebollin
+                        </span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
 
-   </section>
+    <section class="footer">
+        <div class="container">
+            <div class="row justify-content-evenly" id="ordernar">
+                <div class="col-xs-12 col-sm-5">
+                    <h2>Ordernar</h2>
+                    <div class="row">
+                        <div class="col-sm">
+                            <ul class="footer__order-list">
+                                <li>Delivery en Concepción</li>
+                                <li>
+                                    <a
+                                        href="https://www.pedidosya.cl/restaurantes/gran-concepcion/restaurant-feng-menu">
+                                        <img src="assets/delivery-logo-2.svg" alt="deliver-logo">
+                                    </a>
+
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-sm">
+                            <ul class="footer__order-list">
+                                <li>Retiro en local</li>
+                                <li>+56 41 2520249</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4" id="contacto">
+                    <h2>Contacto</h2>
+                    <ul class="footer__contact-list">
+                        <li>
+                        
+                            Telefono: +56 41 2520249
+                        </li>
+                        <li>
+                           
+                            Direccion: Dr. Wilhelm 37, Concepción, Chile
+                        </li>
+                        <li>
+                            <i class="fab fa-instagram"></i>
+                            <a href="https://www.instagram.com/restaurant_feng/">
+                            
+                            Instagram
+                        </a></li>
+                    </ul>
+                </div>
+
+                <div class="col-xs-12 col-sm-3">
+                    <h2>Find us here</h2>
+                    <div class="footer__googlemap">
+                        <img src="assets/googlemap.png" alt="google-map">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        var burgerIcon = document.getElementById("top-nav__menu-icon");
+        var navMenu = document.getElementById("top-nav__menu");
+        var navBar = document.getElementsByTagName("nav")[0];
+
+        const menuExpand = () => {
+            navMenu.classList.toggle("top-nav__menu--active");
+        }
+        
+        document.addEventListener("scroll", () => {
+            if (navMenu.classList.contains("top-nav__menu--active")) {
+                navMenu.classList.toggle("top-nav__menu--active");
+            }
+            
+        })
+
+        document.addEventListener("DOMContentLoaded", () => {
+            if (navMenu.classList.contains("top-nav__menu--active")) {
+                navMenu.classList.remove("top-nav__menu--active");
+            }
+
+        })
+
+        window.addEventListener("resize", () => {
+            if (window.innerWidth > 768) {
+                if (navMenu.classList.contains("top-nav__menu--active")) {
+                    navMenu.classList.remove("top-nav__menu--active");
+                }
+            }
+        })
+        
+    </script>
+
 </body>
 
 </html>
