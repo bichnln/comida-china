@@ -48,7 +48,7 @@
     </header>
     <section class="hero">
         <div class="container hero__title">
-            <h1>
+            <h1 class="fade-in">
                 Comida China de Calidad en Concepción
             </h1>
             <h3>CASI 20 AÑOS DE TRAYECTORIA Y TRADICIÓN</h3>
@@ -847,7 +847,16 @@
 
         document.addEventListener("DOMContentLoaded", () => {
             if (navMenu.classList.contains("top-nav__menu--active")) {
-                navMenu.classList.toggle("top-nav__menu--active");
+                navMenu.classList.remove("top-nav__menu--active");
+            }
+
+        })
+
+        window.addEventListener("resize", () => {
+            if (window.innerWidth > 768) {
+                if (navMenu.classList.contains("top-nav__menu--active")) {
+                    navMenu.classList.remove("top-nav__menu--active");
+                }
             }
         })
         

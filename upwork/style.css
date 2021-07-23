@@ -202,8 +202,9 @@ ul.leaders li .food-description .tag {
         width: 100vw;
         height: 92vh;
         background-color: white;
-        transform: translateX(100%);
         transition: all .5s ease-in-out;
+        transform: translateX(100%);
+        
        z-index: 99;
         
     }
@@ -338,6 +339,8 @@ ul.leaders li .food-description .tag {
    position: relative;
    line-height: 1.3em;
    margin: 20px 0;
+
+   
 }
 
 
@@ -363,6 +366,7 @@ ul.leaders li .food-description .tag {
     .hero__title h1 {
         font-size: 18px;
         line-height: 1em;
+         
     }
 
     .hero__title h3 {
@@ -418,3 +422,19 @@ ul.leaders li .food-description .tag {
    max-width: 80%;
 }
 
+.fade-in {
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 2s;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
